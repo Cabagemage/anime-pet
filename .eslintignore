@@ -1,0 +1,6 @@
+# Environment
+node_modules
+.next
+.idea
+.storybook
+stories

@@ -1,0 +1,60 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "next",
+        "prettier",
+        "plugin:react-hooks/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "unused-imports"],
+    "rules": {
+        "react/jsx-filename-extension": [2, { "extensions": [".tsx", ".ts"] }],
+        "react/jsx-props-no-spreading": 0,
+        "import/extensions": [
+            2,
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "arrow-body-style": [2, "always"],
+        "import/prefer-default-export": 0,
+        "react/no-array-index-key": 0,
+        "import/no-absolute-path": 0,
+        "import/no-unresolved": 0,
+        "@typescript-eslint/no-explicit-any": 2,
+        "@typescript-eslint/ban-types": 2,
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": 2,
+        "@typescript-eslint/no-empty-interface": 2,
+        "no-useless-return": 0,
+        "curly": [2, "all"],
+        "react-hooks/exhaustive-deps": 0,
+        "no-console": [
+            "error",
+            {
+                "allow": ["info"]
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["**/*.styled.tsx"],
+            "rules": {
+                "arrow-body-style": [2, "as-needed"]
+            }
+        }
+    ]
+}

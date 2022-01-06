@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    padding: 30px;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+
+    max-width: 1280px;
+    margin-bottom: 30px;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__item {
+    margin-bottom: 10px;
+}
+.nav__item:last-child {
+    margin: 0;
+}
+.nav__item:hover {
+    color: orange;
+    transition: all 1s ease;
+}

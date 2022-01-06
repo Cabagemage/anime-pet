@@ -1,0 +1,39 @@
+.header {
+    width: 100%;
+    max-width: 1280px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.logo {
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-self: center;
+}
+.logo:hover {
+    background-color: grey;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav__list {
+    display: flex;
+    gap: 20px;
+}
+.nav__item {
+}
+.nav__item:hover {
+    color: orange;
+    transition: all 1s ease;
+}

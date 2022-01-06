@@ -1,0 +1,13 @@
+.search__wrapper {
+    display: flex;
+    justify-content: center;
+}
+.search {
+    border-radius: 30px;
+    width: 20vw;
+    max-width: 400px;
+    height: 30px;
+    padding: 0 20px 0 20px;
+    justify-self: center;
+    align-self: center;
+}

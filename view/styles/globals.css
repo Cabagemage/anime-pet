@@ -1,0 +1,31 @@
+@import url('../../public/fonts/fonts.css');
+html,
+body {
+    font-family: 'Anime Ace v05', sans-serif, serif;
+    background: -webkit-linear-gradient(
+        180deg,
+        rgb(23, 24, 24) 42%,
+        rgb(86, 181, 184)
+    );
+    background: -moz-linear-gradient(
+        180deg,
+        rgb(23, 24, 24) 42%,
+        rgb(86, 181, 184)
+    );
+    background: linear-gradient(180deg, rgb(23, 24, 24) 42%, rgb(86, 181, 184));
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
