@@ -3,8 +3,10 @@ import styles from './animeList.module.css';
 import Image from 'next/image';
 import { IAnimeListProps } from '../../../pages';
 import Link from 'next/link';
+import Genres from '../genres';
+import Rating from '../rating';
 
-const AnimeList: FC<IAnimeListProps> = ({ animes, title, type }) => {
+const AnimeList: FC<IAnimeListProps> = ({ animes, title }) => {
     return (
         <section>
             <h1 className={styles.title}>{title}</h1>
@@ -16,7 +18,7 @@ const AnimeList: FC<IAnimeListProps> = ({ animes, title, type }) => {
                                 <article className={styles.article}>
                                     <div className={styles.imageWrapper}>
                                         <Image
-                                            src={item.coverImage.large}
+                                            src={item.coverImage.extraLarge}
                                             layout='fill'
                                             objectFit='cover'
                                         />
@@ -28,21 +30,14 @@ const AnimeList: FC<IAnimeListProps> = ({ animes, title, type }) => {
                                         <p className={styles.truncate_text}>
                                             {item.description}
                                         </p>
-                                        <ul className={styles.genres}>
-                                            {item.genres.map((genre) => {
-                                                return (
-                                                    <li
-                                                        className={
-                                                            styles.genre
-                                                        }>
-                                                        <p>{genre}</p>
-                                                    </li>
-                                                );
-                                            })}
-                                        </ul>
-                                        <span>
-                                            Рейтинг аниме: {item.averageScore}{' '}
-                                        </span>
+                                        <Genres genres={item.genres} />
+
+                                        <div className={styles.flex}>
+                                            <p>Anime's rating is</p>
+                                            <Rating
+                                                rating={item.averageScore}
+                                            />
+                                        </div>
                                     </div>
                                 </article>
                             </li>

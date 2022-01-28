@@ -1,5 +1,5 @@
 export const getAnimeShortInfoQuery = `
-query ($id: Int, $page: Int, $perPage: Int) {
+query ($id: Int, $page: Int, $perPage: Int, $search: String) {
     Page (page: $page, perPage: $perPage) {
       pageInfo {
         total
@@ -8,13 +8,13 @@ query ($id: Int, $page: Int, $perPage: Int) {
         hasNextPage
         perPage
       }
-      media (id: $id, type: ANIME) {
+      media (id: $id, type: ANIME, sort: SCORE_DESC, search: $search) {
         id
         title {
           romaji
         }
         coverImage{
-            large
+            extraLarge
         }
         genres
         averageScore
@@ -46,9 +46,15 @@ query  {
       month
       day
     }
+    startDate {
+        year
+        month
+        day
+    }
     trailer{
       site
       thumbnail
+      
     }
     status
         genres

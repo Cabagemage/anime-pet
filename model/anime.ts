@@ -1,10 +1,11 @@
 import { getAnimeByIdQuery, getAnimeShortInfoQuery } from './queries';
 
-var variables = {
-    page: 1,
-    perPage: 20,
+const getVariables = (page: number, perPage: number) => {
+    return {
+        page: page,
+        perPage: perPage,
+    };
 };
-const getVariables = (page: number, perPage: number) => {};
 // Define the config we'll need for our Api request
 const getOptions = (query: string) => {
     const options = {
@@ -15,7 +16,7 @@ const getOptions = (query: string) => {
         },
         body: JSON.stringify({
             query: query,
-            variables: variables,
+            variables: getVariables(1, 20),
         }),
     };
     return options;
@@ -40,7 +41,7 @@ export async function handleShortAnimeFetch() {
 
         return anime;
     } catch (e) {
-        console.log(e);
+        handleError(e);
     }
 }
 

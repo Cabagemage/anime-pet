@@ -4,8 +4,9 @@ import logo from '../../../public/icons/logo.png';
 import styles from './header.module.css';
 import { routes } from './header.data';
 import Search from '../search';
+import { FC } from 'react';
 
-const Header = () => {
+const Header: FC = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>

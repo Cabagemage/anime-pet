@@ -8,9 +8,9 @@ const Footer: FC = () => {
         <footer className={styles.footer}>
             <nav className={styles.navigation}>
                 <ul className={styles.nav__list}>
-                    {routes.map((route) => {
+                    {routes.map((route, idx) => {
                         return (
-                            <li className={styles.nav__item}>
+                            <li key={idx} className={styles.nav__item}>
                                 <Link href={route.href}>{route.path}</Link>
                             </li>
                         );

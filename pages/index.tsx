@@ -8,7 +8,7 @@ import { handleShortAnimeFetch } from '../model/anime';
 
 export interface IAnime {
     averageScore: number;
-    coverImage: { large: string };
+    coverImage: { extraLarge: string };
     description: string;
     genres: string[];
     id: number;

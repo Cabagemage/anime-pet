@@ -14,7 +14,8 @@
         "isolatedModules": true,
         "noUncheckedIndexedAccess": true,
         "jsx": "preserve",
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "incremental": true
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "src/**/*.stories.tsx", "src/storybook/**/*"]
